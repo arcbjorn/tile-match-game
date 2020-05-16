@@ -1,6 +1,6 @@
 # Tiles Memory Game (using React)
 
-Demo: https://arcbjorn.github.io/tile-match-game/
+Demo: https://arcbjorn.github.io/tile-match-game
 
 ### Clone repository
 
