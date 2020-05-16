@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+@keyframes shake {
+  0%   { transform: rotate(0deg); }
+  20%  { transform: rotate(5deg); }
+  40%  { transform: rotate(-5deg); }
+  60%  { transform: rotate(5deg); }
+  80%  { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes pop-in {
+  0%   { 
+    transform: scale(.5, .5);
+    opacity: 0; 
+  }
+  40%  { opacity: 1; }
+  65%  { transform: scale(1.1, 1.1); }
+  100% { transform: scale(1, 1); }
+}
+
+@keyframes pop-away {
+  0%   { transform: scale(1, 1) translate(0,0); }
+  40%  { transform: scale(1.1, 1.1); }
+  65%  { opacity: 1; }
+  99%  { transform: scale(.5, .5); opacity: 0; }
+  100% { transform: translate(-10000em,-10000em); }
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body{
+  height: 100%;
+}
+
+body {
+  font-family: 'Montserrat', serif;
+}
+
+.board {
+  background-color: #FFD791;
+}
+
+.tile-board {
+  position: relative;
+}
+
+.board {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.ui {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+}
+
+.ui--visible {
+  animation-name: pop-in;
+  animation-duration: .75s;
+  animation-fill-mode: forwards;
+}
+.ui--hidden {
+  animation-name: pop-away;
+  animation-duration: .75s;
+  animation-fill-mode: forwards;
+}
+
+.ui-box {
+  width: 90%;
+  background-color: #CDD1DE;
+  padding: 20px;
+  text-align: center;
+  border-radius: 1em;
+  border: 6px solid #9F7833;
+}
+
+.ui-title {
+  font-family: 'Montserrat', cursive;
+  font-size: 8vw;
+  display: block;
+  margin: 0;
+  color: #9F7833;
+  line-height: 8vw;
+}
+
+.ui-stats {
+  text-transform: uppercase;
+  font-size: 3vw;
+  color: #fff;
+  margin-bottom: .3em;
+}
+
+.ui-number {
+  color: #9F7833;
+}
+
+.ui-shuffle-button{
+  font-size: 5vw;
+  border-radius: 0.2em;
+  border: 0;
+  text-transform: uppercase;
+  border: 2px solid #9F7833;
+  color: #9F7833;
+  background-color: transparent;
+  outline: 0;
+  transition: all .25s;
+  transition-timing-function: ease-out;
+  padding-left: 7vw;
+  padding-right: 7vw;
+  
+  &:hover{
+    background: #9F7833;
+    border-color: #9F7833;
+    color: #fff;
+  }
+}
+
+
+.tiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  // flex-directon: row;
+  // flex-wrap: wrap;
+  // align-items: center;
+  // justify-content: center;
+}
+
+.tile {
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  
+  transition: all .2s;
+  
+  perspective: 800;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.tile--removed {
+  animation-name: shake;
+  animation-duration: .3s;
+}
+
+.tile--selected .tile-inner,
+.tile--removed .tile-inner{
+  transform: rotatey(-180deg);
+  
+}
+
+.tile--unselected .tile-front {
+  cursor: pointer;
+  transition: box-shadow .25s;
+  
+  &:hover{
+    box-shadow: 0px 0px 20px #413620;
+  }
+}
+
+.tile-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all .5s;
+}
+
+.tile-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 5%;
+  backface-visibility: hidden ;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.tile-front {
+  background: #F0EBD8;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.tile-back {
+  z-index: 2;
+  transform: rotatey(-180deg);
+}
+
+.tile--tyrianpurple .tile-back { 
+  background-color: #590925; 
+}
+
+.tile--lightgreen .tile-back { 
+  background-color: #8AEA92; 
+}
+
+.tile--greensheen .tile-back { 
+  background-color: #80ADA0; 
+}
+
+.tile--independence .tile-back { 
+  background-color: #5F5566; 
+}
+
+.tile--oldburgundy .tile-back { 
+  background-color: #33202A; 
+}
+
+.tile--azure .tile-back { 
+  background-color: #007FFF; 
+}
+
+.tile--chinapink .tile-back { 
+  background-color: #E56399; 
+}
+
+.tile--copperred .tile-back { 
+  background-color: #D1603D; 
+}
