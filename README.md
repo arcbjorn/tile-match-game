@@ -1,9 +1,11 @@
 # Tiles Memory Game (using React)
 
+Demo: https://arcbjorn.github.io/tile-match-game
+
 ### Clone repository
 
 ```sh
-git clone https://github.com/arcbjorn/tile-match-game
+git clone https://github.com/arcbjorn/tile-match-game.git
 ```
 
 ### Install depemdencies
