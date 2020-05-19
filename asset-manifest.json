@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/tile-match-game/static/css/main.879e173f.chunk.css",
+    "main.js": "/tile-match-game/static/js/main.d57288a3.chunk.js",
+    "main.js.map": "/tile-match-game/static/js/main.d57288a3.chunk.js.map",
+    "runtime-main.js": "/tile-match-game/static/js/runtime-main.bdd40458.js",
+    "runtime-main.js.map": "/tile-match-game/static/js/runtime-main.bdd40458.js.map",
+    "static/js/2.537b39dd.chunk.js": "/tile-match-game/static/js/2.537b39dd.chunk.js",
+    "static/js/2.537b39dd.chunk.js.map": "/tile-match-game/static/js/2.537b39dd.chunk.js.map",
+    "index.html": "/tile-match-game/index.html",
+    "precache-manifest.0f7e92075cb9cef2baab7fdbfd6d473f.js": "/tile-match-game/precache-manifest.0f7e92075cb9cef2baab7fdbfd6d473f.js",
+    "service-worker.js": "/tile-match-game/service-worker.js",
+    "static/css/main.879e173f.chunk.css.map": "/tile-match-game/static/css/main.879e173f.chunk.css.map",
+    "static/js/2.537b39dd.chunk.js.LICENSE.txt": "/tile-match-game/static/js/2.537b39dd.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bdd40458.js",
+    "static/js/2.537b39dd.chunk.js",
+    "static/css/main.879e173f.chunk.css",
+    "static/js/main.d57288a3.chunk.js"
+  ]
+}
