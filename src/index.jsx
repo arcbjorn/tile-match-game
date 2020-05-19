@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Board from './App';
+// eslint-disable-next-line import/extensions
+import Board from './components/Board.jsx';
 // import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
     <Board />
   </React.StrictMode>,
-  document.getElementById('app')
+  document.getElementById('app'),
 );
 
 // serviceWorker.unregister();
